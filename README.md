@@ -1,3 +1,6 @@
-# readme file example for features branch
+# Readme file example for features branch
 
-description of the project ...
+Some description of the project ...
+
+
+
