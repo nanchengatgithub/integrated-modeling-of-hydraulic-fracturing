@@ -8,7 +8,7 @@ The workflow consists of the following major steps:
 - Import pressure data, from flow simulation models or from a user-defined pressure-depth table in csv-format (depth in TVDMSL and pressure in bara)
 - Build StimPlan models for selected locations (measured depths of the well) based on the Geo-grid and its cell properties, geo-mechanical input and pressure data
 - Run StimPlan fracture propagation simulation
-- Import StimPlan simulated fractures into ResInsight and convert and export the fracture in the form of well completion data (well connection factors)
+- Import StimPlan simulated fractures into ResInsight and convert the fractures and export them in the form of well completion data (well connection factors)
 - Eclipse simulation for well performance
 
 
