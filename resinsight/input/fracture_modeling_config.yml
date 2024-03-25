@@ -1,0 +1,109 @@
+#### input variables relevant to hydraulic fracture modeling and perforation
+#### !!!!
+#### !!!! DO NOT change the name of any of these variables as these names are used in various Python scripts!!!!
+#### !!!! Only change values of variables!
+#### !!!! There must be only ONE such file (.yml) in the folder of resinsight/input under runpath on scratch disc
+
+#### nanc@equinor.com
+#### 2022-03-09
+
+
+geogrid_path: ../iter-3/share/results/grids/                               # geo-grid, permx,permz, poro, facies, ntg
+pressure_data_source:                                                      # specify data source for current pressure, only ONE source is accepted                                  
+  - init_pres_simgrid_path: ../iter-3/eclipse/model/                       # simulation grid for initial pressure
+  - pres_simgrid_path: ../pred_ref/eclipse/model/                          # simulation grid for current pressure                                     
+  - pressure_table_file: #resinsight/input/pressure_table.csv                # use pressure table for both initial and current pressures, or one of them. This methog is valid for one pressure regime only
+
+                                                                           
+frac_date: 2021-01-01                                                      # yyyy-mm-dd, the frac_date must be in the .UNRST file
+
+dev_file: share/results/wells/Well.dev                                     # deviation file for well to be fractured
+well_groupname: OP                                                         # group name for the well specification
+control_mode: GRUP
+max_oil_rate: 800
+max_wat_rate: 1*
+max_gas_rate: 1E6
+max_liquid_rate: 1*
+max_resv: 1*
+min_bhp: 90
+min_thp: 1*
+vfp_tab_num: 1*
+
+
+elastic_file: resinsight/input/elastic_properties.csv                      # table for interpolation of elastic properties per formation, per facies
+formation_file: resinsight/input/geogrid_zone_layer_mapping.lyr            # definition of formation names by k-layer for geo_grid
+facies_file: resinsight/input/facies_names.roff                            # facies names for facies index defined in geo_grid
+
+default_num_fracs: 4                                # default number of fractures
+min_frac_spacing: 100                               # Min fracture spacing in m; number of fractures will be reduced if spacing is less than min spacing
+formations_for_frac:                                # specify formations for fracture initiation, formation names must be present in the fromation definition file  
+  - Valysar
+  - Therys
+  - Volon
+facies_for_frac_initiation:                         # specify facies for fracture initiation, facies names must be present in the facies name file  
+  - Channel
+  - Crevasse
+  - Lowershoreface
+  - Uppershoreface
+rathole: 30                                         # measured depth from lowest fracture to well TD, in meter
+k_index_for_frac_start: 15                          # upper k-index in geo_grid to initiate fracture (must be intersected by the well); 0 means not to be used
+k_index_for_frac_end: 0                             # lower k-index in geo_grid to initiate fracture (must be intersected by the well); 0 means not to be used                             
+
+#### parameters for StimPlan modeling
+default_base_data: stimplan/input/BASE.FRK          # default basemodel data (a sort of model template file for StimPlan models)
+
+perforation_length: 1.0                     # perforation length, m
+fracture_orientation: Transverse            # orientation options (Longitudinal, Transverse, Azimuth)
+
+extraction_offset_top: 200                  # height of StimPlan model above fracture initiation point, m
+extraction_offset_bottom: 200               # height of StimPlan model below fracture initiation point, m 
+
+reference_reservoir_temperature: 127.0
+reference_temperature_gradient: 0.038
+reference_temperature_depth: 3300
+
+reference_vertical_stress: 680
+reference_vertical_stress_gradient: 0.251
+reference_stress_depth: 3300
+
+overburden_formation: Valysar                # must be a formation as defined in the formation_file
+overburden_facies: Floodplain                # must be a facies as defined in the facies_file
+overburden_height: 70                        # thickness of overburden, m
+overburden_porosity: 0.01                    # porosity of overburden                                 
+
+underburden_formation: Volon                 # must be a formation as defined in the formation_file 
+underburden_facies: Floodplain               # must be a facies as defined in the facies_file      
+underburden_height: 70                       # thickness of underburden, m                          
+underburden_porosity: 0.01                   # porosity of underburden                              
+
+# input to stim_plan_model_template.facies_properties().facies_definition() for facies_definition
+result_type: INPUT_PROPERTY                  # Cell Result Type           
+result_variable: FACIES                      # Cell Result Property
+
+# input to stim_plan_model_template.non_net_layers() for facies_definition
+result_type_non_net: INPUT_PROPERTY          # Cell Result Type
+result_variable_non_net: NTG                 # Cell Result Property
+formation_non_net: Valysar              
+facies_non_net: Floodplain
+cutoff_non_net: 0                            # cut-off value for 'result_variable_non_net'
+
+
+# input to facies pressure settings 
+# to set degrees of differential pressure depletion for coarsened simulation model cells
+# where multiple facies are found in the geo-grid model for the same depth interval
+facies_pressure_settings:
+  - Floodplain:     0.0
+  - Coal:     0.0
+  - Calcite:     0.0
+  - Offshore:     0.0
+  - Lowershoreface:    0.8
+  - Uppershoreface:    0.85
+  - Channel:      1.0
+  - Crevasse:     0.9
+
+
+#### input to perforation parameters
+start_md: 3800                               # start MD for well perforation
+end_md: 5800                                 # end MD for well perforation
+well_diameter: 0.216                         # wellbore diameter, m
+skin_factor: 2                               # well skin factor
