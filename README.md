@@ -21,9 +21,9 @@ There are a few tools involved in the HFM workflow:
 
 > prepare data and build and export StimPlan models
 
- import the simulation results from StimPlan, convert and export the simulated fracture in the form of connection factors for Eclipse
+> import the simulation results from StimPlan, convert and export the simulated fracture in the form of connection factors for Eclipse
 
- plotting and 3D visualization
+> plotting and 3D visualization
 
 - RMS
 
