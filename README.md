@@ -19,7 +19,7 @@ There are a few tools involved in the HFM workflow:
 
 - StimPlan, a hydraulic fracturing modeling tool, is used to simulate hydraulic fracture propagation. The end result from StimPlan simulation is an xml file describing the fracture geometry and conductivities.
 
-- ResInsight is used to:>
+- ResInsight is used to:
 
   - prepare data and build and export StimPlan models
 
@@ -36,37 +36,37 @@ There are a few tools involved in the HFM workflow:
 
 - Rock mechanics data for each litho-facies per formation zone, in csv format.
 
-- Young’s modulus
+  - Young’s modulus
 
-- Poission’s ratio
+  - Poission’s ratio
 
-- Fracture toughness, K-Ic
+  - Fracture toughness, K-Ic
 
-- Proppant embedment
+  - Proppant embedment
 
-- Biot cofficient, a function of rock porosity and elastic modulus for porous rocks such as sandstone. It’s value ranges between zero and one.
+  - Biot cofficient, a function of rock porosity and elastic modulus for porous rocks such as sandstone. It’s value ranges between zero and one.
 
-- Effective stress ratio of horizontal stress to vertical stress, k0
+  - Effective stress ratio of horizontal stress to vertical stress, k0
 
-- Fluid loss coefficient
+  - Fluid loss coefficient
 
-- Fluid spurt loss
+  - Fluid spurt loss
 
-- Immobile fluid saturation
+  - Immobile fluid saturation
 
 - Data from geo-grid model
 
-- lithofacies data (FACIES)
+  - lithofacies data (FACIES)
 
-- formation name file
+  - formation name file
 
-- petrophysical data (PERMX, PERMZ, PORO, SWL, NTG). The names of these properties must be Eclipse compatible.
+  - petrophysical data (PERMX, PERMZ, PORO, SWL, NTG). The names of these properties must be Eclipse compatible.
 
 - Reservoir pressure data from sim-grid or a pressure-depth table
 
-- initial reservoir pressure
+  - initial reservoir pressure
 
-- current reservoir pressure, i.e. the pressure when the well is fractured
+  - current reservoir pressure, i.e. the pressure when the well is fractured
 
 - Well data
 
