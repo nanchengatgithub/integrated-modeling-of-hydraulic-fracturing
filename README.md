@@ -12,6 +12,7 @@ The workflow consists of the following major steps:
 - Eclipse simulation for well performance
 
 
+
 Tools for HFM workflow
 There are a few tools involved in the HFM workflow:
 
@@ -36,47 +37,48 @@ Minimum data requirements
 
 - Young’s modulus
 
-Poission’s ratio
+- Poission’s ratio
 
-Fracture toughness, K-Ic
+- Fracture toughness, K-Ic
 
-Proppant embedment
+- Proppant embedment
 
-Biot cofficient, a function of rock porosity and elastic modulus for porous rocks such as sandstone. It’s value ranges between zero and one.
+- Biot cofficient, a function of rock porosity and elastic modulus for porous rocks such as sandstone. It’s value ranges between zero and one.
 
-Effective stress ratio of horizontal stress to vertical stress, k0
+- Effective stress ratio of horizontal stress to vertical stress, k0
 
-Fluid loss coefficient
+- Fluid loss coefficient
 
-Fluid spurt loss
+- Fluid spurt loss
 
-Immobile fluid saturation
+- Immobile fluid saturation
 
-Data from geo-grid model
+- Data from geo-grid model
 
-lithofacies data (FACIES)
+- lithofacies data (FACIES)
 
-formation name file
+- formation name file
 
-petrophysical data (PERMX, PERMZ, PORO, SWL, NTG). The names of these properties must be Eclipse compatible.
+- petrophysical data (PERMX, PERMZ, PORO, SWL, NTG). The names of these properties must be Eclipse compatible.
 
-Reservoir pressure data from sim-grid or a pressure-depth table
+- Reservoir pressure data from sim-grid or a pressure-depth table
 
-initial reservoir pressure
+- initial reservoir pressure
 
-current reservoir pressure, i.e. the pressure when the well is fractured
+- current reservoir pressure, i.e. the pressure when the well is fractured
 
-Well data
+- Well data
 
-well deviation file
+  - well deviation file
 
-number of hydraulic fractures
+  - number of hydraulic fractures
 
-fracturing date
+  - fracturing date
 
-well startup date
+  - well startup date
 
-data for well production constraints
+  - data for well production constraints
+
 
 A yaml-file is used for configuring input data, where file paths to different grids and rock mechanics data, well data and other data for creating StimPlan model template etc. are specified.
 
