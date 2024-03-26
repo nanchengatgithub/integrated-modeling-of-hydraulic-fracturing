@@ -12,9 +12,9 @@ Hydraulic fracture modeling (HFM) is a specialized workflow for modeling and sim
 There are a few tools involved in the HFM workflow:
 - StimPlan, a hydraulic fracturing modeling tool, is used to simulate hydraulic fracture propagation. The end result from StimPlan simulation is an xml file describing the fracture geometry and conductivities.
 - ResInsight is used to:
-  > prepare data and build and export StimPlan models.
-  > import the simulation results from StimPlan, convert and export the simulated fracture in the form of connection factors for Eclipse.
-  > plotting and 3D visualization.
+  - prepare data and build and export StimPlan models
+  - import the simulation results from StimPlan, convert and export the simulated fracture in the form of connection factors for Eclipse
+  - plotting and 3D visualization
 - RMS for geo-modeling
 - Eclipse or OPM for flow simulation
 ## Minimum data requirements
