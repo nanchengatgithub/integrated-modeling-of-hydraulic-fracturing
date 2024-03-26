@@ -20,7 +20,6 @@ There are a few tools involved in the HFM workflow:
 ## Minimum data requirements
 - Base case StimPlan fracture design setup, saved as a .FRK text file. It is obtained from a Windows-based StimPlan project (default file name is LASTDATA.FRK and default location is StimPlan Scratch Directory).
 - Rock mechanics data for each litho-facies per formation zone, in csv format.
-> 
   - Young’s modulus
   - Poission’s ratio
   - Fracture toughness, K-Ic
@@ -30,7 +29,6 @@ There are a few tools involved in the HFM workflow:
   - Fluid loss coefficient
   - Fluid spurt loss
   - Immobile fluid saturation
-<
 - Data from geo-grid model
   - lithofacies data (FACIES)
   - formation name file
