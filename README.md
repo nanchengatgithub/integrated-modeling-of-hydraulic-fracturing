@@ -42,6 +42,7 @@ There are a few tools involved in the HFM workflow:
   - fracturing date
   - well startup date
   - data for well production constraints
+    
 A yaml-file is used for configuring input data, where file paths to different grids and rock mechanics data, well data and other data for creating StimPlan model template etc. are specified.
 
 HFM Workflow
