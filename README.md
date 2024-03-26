@@ -45,7 +45,7 @@ There are a few tools involved in the HFM workflow:
     
 A yaml-file is used for configuring input data, where file paths to different grids and rock mechanics data, well data and other data for creating StimPlan model template etc. are specified.
 
-HFM Workflow
+##HFM Workflow
 A separate ERT configuration file for HFM is created, containing file structure setup, data preparation and forward model steps. This is the only file needs to be included in the main ERT configuration file (using the keywork INCLUDE). Drogon tutorial file structure is used as a standard in these forward model steps. The figure below shows all the necessary steps for HFM (found in the file called hydraulic_fracturing.ert):
 
 -------- generate formation name file as input to ResInsight
