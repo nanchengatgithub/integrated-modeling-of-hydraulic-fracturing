@@ -15,26 +15,26 @@ The workflow consists of the following major steps:
 Tools for HFM workflow
 There are a few tools involved in the HFM workflow:
 
-StimPlan, a hydraulic fracturing modeling tool, is used to simulate hydraulic fracture propagation. The end result from StimPlan simulation is an xml file describing the fracture geometry and conductivities.
+- StimPlan, a hydraulic fracturing modeling tool, is used to simulate hydraulic fracture propagation. The end result from StimPlan simulation is an xml file describing the fracture geometry and conductivities.
 
-ResInsight is used to:
+- ResInsight is used to:
 
-prepare data and build and export StimPlan models
+-- prepare data and build and export StimPlan models
 
-import the simulation results from StimPlan, convert and export the simulated fracture in the form of connection factors for Eclipse
+-- import the simulation results from StimPlan, convert and export the simulated fracture in the form of connection factors for Eclipse
 
-plotting and 3D visualization
+-- plotting and 3D visualization
 
-RMS
+- RMS
 
-Eclipse or OPM
+- Eclipse or OPM
 
 Minimum data requirements
-Base case StimPlan fracture design setup, saved as a .FRK text file. It is obtained from a Windows-based StimPlan project (default file name is LASTDATA.FRK and default location is StimPlan Scratch Directory).
+- Base case StimPlan fracture design setup, saved as a .FRK text file. It is obtained from a Windows-based StimPlan project (default file name is LASTDATA.FRK and default location is StimPlan Scratch Directory).
 
-Rock mechanics data for each litho-facies per formation zone, in csv format.
+- Rock mechanics data for each litho-facies per formation zone, in csv format.
 
-Young’s modulus
+- Young’s modulus
 
 Poission’s ratio
 
