@@ -25,9 +25,9 @@ There are a few tools involved in the HFM workflow:
 
   - plotting and 3D visualization
 
-- RMS
+- RMS for geo-modeling
 
-- Eclipse or OPM
+- Eclipse or OPM for flow simulation
 
 Minimum data requirements
 - Base case StimPlan fracture design setup, saved as a .FRK text file. It is obtained from a Windows-based StimPlan project (default file name is LASTDATA.FRK and default location is StimPlan Scratch Directory).
