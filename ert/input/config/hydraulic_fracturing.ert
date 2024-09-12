@@ -1,3 +1,4 @@
+NUM_CPU 8                             -- StimPlan uses 8 threads per run.
 MAX_RUNTIME         180000             -- Set the maximum allowed run time (in seconds)
 
 --
@@ -7,9 +8,9 @@ FORWARD_MODEL COPY_DIRECTORY(<FROM> = <RUNPATH>/../<PRED_REF_DIR>/eclipse/includ
 --
 --SETENV PYTHONPATH              /prog/ResInsight/current_py38/Python
 --SETENV RESINSIGHT_EXECUTABLE   /prog/ResInsight/current_py38/ResInsight
-SETENV PYTHONPATH              /project/res/x86_64_RH_7/share/resinsight/cs_dev_py38/Python         --dev build by Ceetron Solutoins
-SETENV RESINSIGHT_EXECUTABLE   /project/res/x86_64_RH_7/share/resinsight/cs_dev_py38/ResInsight     --dev build by Ceetron Solutoins
-SETENV LD_LIBRARY_PATH         /prog/ResInsight/2020_odb_api/lib                                    --dev build by Ceetron Solutoins
+--SETENV PYTHONPATH              /project/res/x86_64_RH_7/share/resinsight/cs_dev_py38/Python         --dev build by Ceetron Solutoins
+--SETENV RESINSIGHT_EXECUTABLE   /project/res/x86_64_RH_7/share/resinsight/cs_dev_py38/ResInsight     --dev build by Ceetron Solutoins
+--SETENV LD_LIBRARY_PATH         /prog/ResInsight/2020_odb_api/lib                                    --dev build by Ceetron Solutoins
 
 --SETENV PYTHONPATH              /project/res/x86_64_RH_7/share/resinsight/jenkins_dev_py38/Python
 --SETENV RESINSIGHT_EXECUTABLE   /project/res/x86_64_RH_7/share/resinsight/jenkins_dev_py38/ResInsight
