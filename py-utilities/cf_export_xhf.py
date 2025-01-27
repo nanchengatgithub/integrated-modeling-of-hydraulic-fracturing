@@ -10,6 +10,7 @@ ri_exe = "/prog/ResInsight/current/ResInsight"
 #sys.path.insert(0, ri_py_path)
 #print(sys.path)
 
+
 import rips
 print(f"{rips.__file__}\n")
 
