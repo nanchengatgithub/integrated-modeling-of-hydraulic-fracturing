@@ -1,0 +1,102 @@
+grid_file_path: ../iter-3/eclipse/model/
+output_file_path: eclipse/include_pred/schedule/
+resinsight_project_file: resinsight/model/example.rsp
+
+wells:  
+  well1:
+    deviation: share/results/wells/Well.dev
+    perf1:
+        - 3300                          # start MD
+        - 3600                          # end MD
+        - 0.216                         # wellbore diameter, m
+        - 2                             # well skin factor
+    perf2:
+        - 4000                          # start MD                           
+        - 4400                          # end MD
+        - 0.216                         # wellbore diameter, m
+        - 2                             # well skin factor
+    perf3:
+        - 4500                          # start MD
+        - 4900                          # end MD
+        - 0.216                         # wellbore diameter, m
+        - 0                             # well skin factor
+    perf4:
+        - 5000                          # start MD
+        - 5800                          # end MD
+        - 0.216                         # wellbore diameter, m
+        - 1                             # well skin factor
+    fishbones1:
+        - template_file_fishbones       # template file
+        - 2800                          # start MD
+        - 3200                          # end MD
+        - 12.5                          # spacing
+        - 0.216                         # wellbore diameter, m
+        - 2                             # well skin factor
+    fishbones3:
+        - template_file_fishbones       # template file
+        - 2000                          # start MD
+        - 3000                          # end MD
+        - 0.216                         # wellbore diameter, m
+        - 2                             # well skin factor
+    fracture1:
+        - ../pred_op6/resinsight/input/OP6_StimPlanModel_01_Valysar.xml        # fracture template file
+        - 5000                          # location in MD
+        - Longitudinal                   # orientation options (Longitudinal, Transverse, Azimuth)
+#        - 0.216                         # wellbore diameter, m
+#        - 2                               # well skin factor
+    fracture3:
+        - ../pred_op6/resinsight/input/OP6_StimPlanModel_03_Valysar.xml       # fracture template file
+        - 4300                          # location in MD
+        - Transverse                    # orientation options (Longitudinal, Transverse, Azimuth)
+#        - 0.216                         # wellbore diameter, m
+#        - 2                               # well skin factor
+
+  well2:
+    deviation: share/results/wells/Well2.dev
+    perf1:
+        - 3300                          # start MD
+        - 3600                          # end MD
+        - 0.216                         # wellbore diameter, m
+        - 2                             # well skin factor
+    perf2:
+        - 4000                          # start MD                           
+        - 4400                          # end MD
+        - 0.216                         # wellbore diameter, m
+        - 2                             # well skin factor
+    perf3:
+        - 4500                          # start MD
+        - 4900                          # end MD
+        - 0.216                         # wellbore diameter, m
+        - 0                             # well skin factor
+    perf4:
+        - 5000                          # start MD
+        - 5800                          # end MD
+        - 0.216                         # wellbore diameter, m
+        - 1                             # well skin factor
+    fishbones1:
+        - template_file_fishbones       # template file
+        - 2800                          # start MD
+        - 3200                          # end MD
+        - 12.5                          # spacing
+        - 0.216                         # wellbore diameter, m
+        - 2                             # well skin factor
+    fishbones3:
+        - template_file_fishbones       # template file
+        - 2000                          # start MD
+        - 3000                          # end MD
+        - 0.216                         # wellbore diameter, m
+        - 2                             # well skin factor
+    fracture_zone1:
+        - ../pred_op6/resinsight/input/OP6_StimPlanModel_01_Valysar.xml        # fracture template file
+        - 4500                          # location in MD
+        - Longitudinal                   # orientation options (Longitudinal, Transverse, Azimuth)
+#        - 0.216                         # wellbore diameter, m
+#        - 2                               # well skin factor
+    fracture_Ile3:
+        - ../pred_op6/resinsight/input/OP6_StimPlanModel_03_Valysar.xml       # fracture template file
+        - 4000                          # location in MD
+        - Transverse                    # orientation options (Longitudinal, Transverse, Azimuth)
+#        - 0.216                         # wellbore diameter, m
+#        - 2                               # well skin factor
+
+  

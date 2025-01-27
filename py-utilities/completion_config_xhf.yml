@@ -1,0 +1,39 @@
+grid_file_path: eclipse/model/                             # filename or directory to EGRID file, the first found EGRID file is always used if it's a directory
+parameters_file: parameters.txt
+
+output_file_path: eclipse/include/schedule/                     
+resinsight_project_file: resinsight/model/peik.rsp
+
+wells:  
+  well_A:
+    diameter: 0.216
+    perforation_skin: 2
+    deviation: resinsight/input/well_A_planned.dev
+    frac_tmpl: resinsight/input/WELL_A_StimPlanModel_02_IntraHugin2_Barrier1.xml        # fracture template file
+    orientation:                       # orientation options (Longitudinal, Transverse, Azimuth)           
+      - Azimuth: 90                    
+    frac_interval:
+        - 5800                          # start MD
+        - 6570                          # end MD
+
+  well_B:
+    diameter: 0.216
+    perforation_skin: 2
+    deviation: resinsight/input/well_B_planned.dev
+    frac_tmpl: resinsight/input/WELL_B_StimPlanModel_04_IntraHugin3_Barrier2.xml        # fracture template file
+    orientation:                       # orientation options (Longitudinal, Transverse, Azimuth)           
+      - Transverse:                     
+    frac_interval:
+        - 6000                          # start MD
+        - 6790                          # end MD
+
+  well_C:
+    diameter: 0.216
+    perforation_skin: 2
+    deviation: resinsight/input/well_C_planned.dev
+    frac_tmpl: resinsight/input/WELL_C_StimPlanModel_02_IntraHugin3_Barrier2.xml        # fracture template file
+    orientation:                       # orientation options (Longitudinal, Transverse, Azimuth)           
+      - Longitudinal:                     
+    frac_interval:
+        - 5910                          # start MD
+        - 6570                          # end MD
