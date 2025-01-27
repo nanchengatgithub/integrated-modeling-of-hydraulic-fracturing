@@ -1,4 +1,4 @@
-NUM_CPU 8                             -- StimPlan uses 8 threads per run.
+NUM_CPU 8                             -- StimPlan uses 8 threads per run, optimal for StimPlan simulation.
 MAX_RUNTIME         180000             -- Set the maximum allowed run time (in seconds)
 
 --
