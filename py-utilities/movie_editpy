@@ -1,0 +1,62 @@
+#import cv2
+from moviepy.video.io.VideoFileClip import VideoFileClip
+from moviepy.video.io.ffmpeg_writer import FFMPEG_VideoWriter
+from moviepy.video.fx.all import crop
+
+
+def trim_video(input_path, output_path, start_time, end_time):
+    """Trim video from start_time to end_time using moviepy"""
+    clip = VideoFileClip(input_path)
+    trimmed_clip = clip.subclip(start_time, end_time)
+    trimmed_clip.write_videofile(output_path)
+    return output_path
+
+def change_frame_rate(movie_infile, movie_outfile, frame_rate):
+    
+    clip = VideoFileClip(movie_infile)
+    writer = FFMPEG_VideoWriter(movie_outfile, clip.size, frame_rate)
+    
+    for frame in clip.iter_frames():
+        writer.write_frame(frame)    
+    writer.close()
+
+    
+def frame_rate_opencv(movie_infile, movie_outfile, frame_rate):
+
+    # Load the video file
+    cap = cv2.VideoCapture(movie_infile) 
+    
+    # Get the video dimensions and frame rate
+    width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    frame_rate = int(cap.get(cv2.CAP_PROP_FPS))
+    
+    # Create an OpenCV video writer with the desired frame rate
+    four_cc = cv2.VideoWriter_fourcc(*'mp4v')
+    out = cv2.VideoWriter(movie_outfile, four_cc, frame_rate, (width, height))
+    
+    # Iterate over the video frames and write them to the output video
+    while cap.isOpened():
+        # Read a frame from the input video
+        ret, frame = cap.read()
+        if not ret:
+            break
+    
+        # Write the frame to the output video
+        out.write(frame)
+    
+    # Release the resources
+    cap.release()
+    out.release()
+    
+if __name__ == "__main__":
+    frame_rate = 100
+    movie_infile = ""
+    movie_outfile = movie_infile.split('.')[0]+'_X'+str(frame_rate)+'.mp4'
+
+    # Example usage, trim from 100 seconds to 200 seconds
+    trimmed = trim_video(movie_infile, movie_infile.split('.')[0]+'_trimmed.mp4', 100, 200)
+
+    # change frame per second and write out
+    change_frame_rate(trimmed, movie_outfile, frame_rate)
+    

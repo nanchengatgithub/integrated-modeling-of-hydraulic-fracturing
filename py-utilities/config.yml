@@ -1,0 +1,64 @@
+#### input variables relevant to well path optimization 
+#### !!!!
+#### !!!! DO NOT change the name of any of these variables as these names are used in other scripts!!!!
+#### !!!! Only change values of variables!
+#### !!!!
+#### nanc@equinor.com
+#### Feb-2022
+
+# location of the simulation grid
+simgrid_path: ../ecl/DROGON-7.EGRID
+
+# location of the formation file for the simulation grid
+formation_file: ../ecl/simgrid_zone_layer_mapping.lyr
+
+
+wellname: Well-1
+well_groupname: OP
+
+# for multi-lateral well
+tie-in_measured_depth: 1600
+
+well_targets:
+  - 463663.50  5932916.85  1617.12
+  - 463266.25  5933550.43  1621.88
+  - 462835.60  5934269.33  1625.48
+  - 462521.62  5934818.93  1629.15
+
+well_targets_lateral:
+  - 463353.73 5933126.32 1605.23
+  - 462852.68 5933586.33 1606.14
+  - 462414.31 5934064.75 1619.31
+
+# dynamic properties to be extracted
+dynamic_props:
+  - PRESSURE
+  - SOIL
+  - SGAS
+  - SWAT
+
+# static properties to be extracted
+static_props:
+  - Active Formation Names
+  - INDEX_K
+  - PERMX
+  - PERMZ
+  
+# date (yyyy-mm-dd) on which data to be extracted; it must exist in simulation restart ouput
+date: 2019-07-01
+
+# define perforation criteria
+formation_id:
+  - 0
+  - 1
+  - 2
+min_soil: 0.7
+max_swat: 1.0
+min_pressure: 200
+min_permx: 500
+     
+# define other data for portations
+well_diameter: 0.216
+skin_factor: 2
+
+
