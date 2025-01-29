@@ -6,6 +6,7 @@ from moviepy.video.io.VideoFileClip import VideoFileClip
 from moviepy.video.io.ffmpeg_writer import FFMPEG_VideoWriter
 
 
+
 def change_frame_rate(movie_infile, movie_outfile, frame_rate):
     
     clip = VideoFileClip(movie_infile) #'path/to/video.mp4')
