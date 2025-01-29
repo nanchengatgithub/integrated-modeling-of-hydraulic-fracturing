@@ -17,6 +17,7 @@ def change_frame_rate(movie_infile, movie_outfile, frame_rate):
     
     writer.close()
 
+
     
 def frame_rate_opencv(movie_infile, movie_outfile, frame_rate):
 
